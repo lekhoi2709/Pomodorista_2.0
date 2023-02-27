@@ -1,7 +1,6 @@
 import AppContainer from "./src/components/app-container";
 import Main from "./src/screens/main";
 import { Box } from "native-base";
-import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator, DrawerContentScrollView } from "@react-navigation/drawer";
 
 const Drawer = createDrawerNavigator();
