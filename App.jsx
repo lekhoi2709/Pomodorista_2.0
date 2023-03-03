@@ -9,7 +9,7 @@ function MyNav() {
    return (
       <Box flex={1}>
          <Drawer.Navigator>
-            <Drawer.Screen name="Main" component={Main} />
+            <Drawer.Screen name="Home" component={Main} />
          </Drawer.Navigator>
       </Box>
    )
