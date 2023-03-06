@@ -62,7 +62,7 @@ export default memo(function AnimatedTaskLabel(props) {
                {children}
             </AnimatedText>
          </AnimatedHStack>
-         <AnimatedBox className="h-[55%]" position='absolute' style={[strikethroughAnimated]} borderBottomWidth={1} />
+         <AnimatedBox className="h-[25%]" position='absolute' style={[strikethroughAnimated]} borderBottomWidth={1} />
       </Pressable>
    )
 })

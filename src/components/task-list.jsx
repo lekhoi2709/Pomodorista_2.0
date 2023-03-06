@@ -32,7 +32,7 @@ export default function TaskList(props) {
    const { data, isEditingId, onChecked, onPressLabel, onEditLabel, onFinishEdit } = props
 
    return (
-      <ScrollView>
+      <ScrollView space={1}>
          {data.map((item) =>
             <HandleTaskItem
                data={item}
