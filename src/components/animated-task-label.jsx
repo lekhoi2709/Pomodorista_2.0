@@ -15,7 +15,7 @@ const AnimatedHStack = Animated.createAnimatedComponent(HStack)
 const AnimatedText = Animated.createAnimatedComponent(Text)
 const AnimatedBox = Animated.createAnimatedComponent(Box)
 
-const TaskLabel = (props) => {
+export default memo(function AnimatedTaskLabel(props) {
    const { isCompleted, onPress, children, textColor, completedTextColor } = props
 
    const textColorProg = useSharedValue(0)
@@ -62,9 +62,7 @@ const TaskLabel = (props) => {
                {children}
             </AnimatedText>
          </AnimatedHStack>
-         <AnimatedBox className="h-[55%]" position='absolute' style={[strikethroughAnimated]} borderBottomWidth={1} />
+         <AnimatedBox className="h-[25%]" position='absolute' style={[strikethroughAnimated]} borderBottomWidth={1} />
       </Pressable>
    )
-}
-
-module.exports = memo(TaskLabel)
+})
