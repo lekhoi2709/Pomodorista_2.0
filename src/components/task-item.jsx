@@ -1,14 +1,15 @@
-import React, { useState, memo, useCallback } from 'react'
+import React, { useCallback } from 'react'
 import { HStack, Checkbox, Icon, themeTools, useColorModeValue, Input } from "native-base"
 import { Ionicons } from "@expo/vector-icons"
-import AnimatedTaskLabel from './animated-task-item'
+import AnimatedTaskLabel from './animated-task-label'
 import theme from '../theme.js'
 
-export default memo(function TaskItem(props) {
-   const { isChecked, onChecked, label, onPressLabel, onChangeLabel, isEditing, finishEditing } = props
+export default TaskItem = (props) => {
+   const { isChecked, onChecked, label, onPressLabel, onChangeLabel, isEditing, onFinishEdit } = props
 
    const activeTextColor = themeTools.getColor(theme, useColorModeValue('light.900', 'light.100'))
    const inactiveTextColor = themeTools.getColor(theme, useColorModeValue('muted.400', 'muted.600'))
+
    const handleChangeTask = useCallback((evt) => {
       onChangeLabel && onChangeLabel(evt.nativeEvent.text)
    }, [onChangeLabel])
@@ -17,7 +18,7 @@ export default memo(function TaskItem(props) {
       <HStack HStack space={4} className="w-full justify-start items-center p-4" >
          <Checkbox
             onChange={onChecked}
-            value={isChecked} size='lg'
+            size='lg'
             colorScheme='indigo'
             borderColor={useColorModeValue('light.600', 'light.400')}
             icon={<Icon name='checkmark-done' as={Ionicons} />}
@@ -34,7 +35,7 @@ export default memo(function TaskItem(props) {
                autoFocus
                onChange={handleChangeTask}
                blurOnSubmit
-               onBlur={finishEditing} /> :
+               onBlur={onFinishEdit} /> :
             <AnimatedTaskLabel
                onPress={onPressLabel}
                isCompleted={isChecked}
@@ -42,7 +43,6 @@ export default memo(function TaskItem(props) {
                completedTextColor={inactiveTextColor}>
                {label}
             </AnimatedTaskLabel>}
-
       </HStack >
    )
-})
+}
