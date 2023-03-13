@@ -6,11 +6,16 @@ import TaskList from '../components/task-list';
 // import TaskItem from '../components/task-item';
 
 const initialData = [
-   {
-      id: 1,
-      label: 'New Task',
-      completed: false,
-   },
+  {
+    id: 1,
+    label: 'New Task',
+    completed: false,
+  },
+  {
+    id: 2,
+    label: 'New Task',
+    completed: false,
+  },
 ]
 
 export default function Main() {
