@@ -32,7 +32,7 @@ export default memo(function AnimatedCheckbox(props) {
             progress={progress}
             checkMarkPath={checkMarkPath}
             strokeWidth={4}
-            checkMarkColor={useColorModeValue("#000000", "#FFFFFF")}
+            checkMarkColor='#FFFFFF'
          />
       </Svg>
    )

@@ -1,6 +1,6 @@
 import Main from '../screens/main'
 import { Box } from "native-base";
-import { createDrawerNavigator, DrawerContentScrollView } from "@react-navigation/drawer";
+import { createDrawerNavigator } from "@react-navigation/drawer";
 
 const Drawer = createDrawerNavigator();
 

@@ -1,12 +1,11 @@
-import React, { useRef, useState } from 'react'
+import React from 'react'
 import { Path } from 'react-native-svg'
-import Animated, { Easing, useAnimatedProps, createAnimatedPropAdapter, interpolate } from 'react-native-reanimated'
+import Animated, { useAnimatedProps,  interpolate } from 'react-native-reanimated'
 
 const AnimatedPath = Animated.createAnimatedComponent(Path)
 
 export default function AnimatedCheckmark(props) {
    const { progress, checkMarkPath, strokeWidth, strokeOpacity, checkMarkColor } = props
-   const [length, setLength] = useState(0)
    // const ref = useRef()
 
    // const checkMarkAdapter = createAnimatedPropAdapter((props) => {
