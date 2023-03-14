@@ -11,11 +11,6 @@ const initialData = [
     label: 'New Task',
     completed: false,
   },
-  {
-    id: 2,
-    label: 'New Task',
-    completed: false,
-  },
 ]
 
 export default function Main() {
