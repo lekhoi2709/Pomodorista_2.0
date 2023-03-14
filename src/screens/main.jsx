@@ -58,7 +58,7 @@ export default function Main() {
     const id = data.length + 1
     setData([...data, {
       id,
-      label: '+',
+      label: '',
       completed: false
     }])
     setEditableId(id)

@@ -51,7 +51,7 @@ export default memo(function AnimatedTaskLabel(props) {
   })
 
   return (
-    <Pressable onPress={onPress}>
+    <Pressable onPress={onPress} className="w-screen">
       <AnimatedHStack style={[labelAnimated]}>
         <AnimatedText
           fontSize={18}
