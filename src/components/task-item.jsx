@@ -6,7 +6,7 @@ import theme from '../theme.js'
 import AnimatedCheckbox from './animated-check-box/animated-checkbox'
 
 export default TaskItem = (props) => {
-  const { isChecked, onChecked, label, onPressLabel, onChangeLabel, isEditing, onFinishEdit } = props
+  const { isChecked, onChecked, label, onPressLabel, onChangeLabel, isEditing, onFinishEdit, labelWidth } = props
 
   const activeTextColor = themeTools.getColor(theme, useColorModeValue('light.900', 'light.100'))
   const inactiveTextColor = themeTools.getColor(theme, useColorModeValue('muted.400', 'muted.600'))
@@ -36,6 +36,7 @@ export default TaskItem = (props) => {
           blurOnSubmit
           onBlur={onFinishEdit} /> :
         <AnimatedTaskLabel
+          labelWidth={labelWidth}
           onPress={onPressLabel}
           isCompleted={isChecked}
           textColor={activeTextColor}

@@ -13,10 +13,16 @@ export const HandleTaskItem = (props) => {
 
   const handleEditLabel = useCallback(label => onEditLabel(data, label), [data, onEditLabel])
 
+  var width = 'w-fit'
+  if (data.label === '') {
+    width = 'w-[80%]'
+  }
+
   return (
     <View>
       <TaskItem
         label={data.label}
+        labelWidth={width}
         isChecked={data.completed}
         onChecked={handlePressCheckbox}
         isEditing={isEditing}

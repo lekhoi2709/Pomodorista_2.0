@@ -16,7 +16,7 @@ const AnimatedText = Animated.createAnimatedComponent(Text)
 const AnimatedBox = Animated.createAnimatedComponent(Box)
 
 export default memo(function AnimatedTaskLabel(props) {
-  const { isCompleted, onPress, children, textColor, completedTextColor } = props
+  const { isCompleted, onPress, children, textColor, completedTextColor, labelWidth } = props
 
   const textColorProg = useSharedValue(0)
   const textColorAnimated = useAnimatedStyle(() => ({
@@ -51,7 +51,7 @@ export default memo(function AnimatedTaskLabel(props) {
   })
 
   return (
-    <Pressable onPress={onPress} className="w-screen">
+    <Pressable onPress={onPress} className={labelWidth}>
       <AnimatedHStack style={[labelAnimated]}>
         <AnimatedText
           fontSize={18}
