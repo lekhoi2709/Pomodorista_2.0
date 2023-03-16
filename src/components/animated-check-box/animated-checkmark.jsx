@@ -6,16 +6,6 @@ const AnimatedPath = Animated.createAnimatedComponent(Path)
 
 export default function AnimatedCheckmark(props) {
    const { progress, checkMarkPath, strokeWidth, strokeOpacity, checkMarkColor } = props
-   // const ref = useRef()
-
-   // const checkMarkAdapter = createAnimatedPropAdapter((props) => {
-   //    if (Object.keys(props).includes('strokeDashoffset')) {
-   //       props.strokeDashoffset = {
-   //          type: 0,
-   //          payload:
-   //       }
-   //    }
-   // })
 
    const animatedProps = useAnimatedProps(() => ({
       strokeDashoffset: interpolate(progress.value, [0, 1], [90, 0]),

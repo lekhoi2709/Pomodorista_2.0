@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import { HStack, Box, Center, themeTools, useColorModeValue, Input } from "native-base"
+import { HStack, Box, themeTools, useColorModeValue, Input } from "native-base"
 import { Pressable } from 'react-native'
 import AnimatedTaskLabel from './animated-task-label'
 import theme from '../theme.js'

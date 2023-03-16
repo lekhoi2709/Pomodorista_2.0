@@ -1,6 +1,5 @@
 import React, { useEffect, memo } from 'react'
 import Svg from 'react-native-svg'
-import { useColorModeValue } from 'native-base'
 import { Easing, useSharedValue, withTiming } from 'react-native-reanimated'
 import AnimatedBox from './animated-box'
 import AnimatedCheckmark from './animated-checkmark'
