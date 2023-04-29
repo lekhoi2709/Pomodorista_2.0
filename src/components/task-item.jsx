@@ -6,43 +6,43 @@ import theme from '../theme.js'
 import AnimatedCheckbox from './animated-check-box/animated-checkbox'
 
 export default TaskItem = (props) => {
-  const { isChecked, onChecked, label, onPressLabel, onChangeLabel, isEditing, onFinishEdit, labelWidth } = props
+   const { isChecked, onChecked, label, onPressLabel, onChangeLabel, isEditing, onFinishEdit, labelWidth } = props
 
-  const activeTextColor = themeTools.getColor(theme, useColorModeValue('light.900', 'light.100'))
-  const inactiveTextColor = themeTools.getColor(theme, useColorModeValue('muted.400', 'muted.600'))
+   const activeTextColor = themeTools.getColor(theme, useColorModeValue('light.900', 'light.100'))
+   const inactiveTextColor = themeTools.getColor(theme, useColorModeValue('muted.400', 'muted.600'))
 
-  const handleChangeTask = useCallback((evt) => {
-    onChangeLabel && onChangeLabel(evt.nativeEvent.text)
-  }, [onChangeLabel])
+   const handleChangeTask = useCallback((evt) => {
+      onChangeLabel && onChangeLabel(evt.nativeEvent.text)
+   }, [onChangeLabel])
 
-  return (
-    <HStack w="full" px={4} alignItems="center" >
-      <Box w="60px" h="60px" className="pt-2">
-        <Pressable onPress={onChecked}>
-          <AnimatedCheckbox checked={isChecked} />
-        </Pressable>
-      </Box>
+   return (
+      <HStack w="full" px={4} alignItems="center" >
+         <Box w="60px" h="60px" className="pt-2">
+            <Pressable onPress={onChecked}>
+               <AnimatedCheckbox checked={isChecked} />
+            </Pressable>
+         </Box>
 
-      {isEditing ?
-        <Input
-          px={1}
-          py={0}
-          placeholder='New Task'
-          variant='unstyled'
-          value={label}
-          fontSize={18}
-          autoFocus
-          onChange={handleChangeTask}
-          blurOnSubmit
-          onBlur={onFinishEdit} /> :
-        <AnimatedTaskLabel
-          labelWidth={labelWidth}
-          onPress={onPressLabel}
-          isCompleted={isChecked}
-          textColor={activeTextColor}
-          completedTextColor={inactiveTextColor}>
-          {label}
-        </AnimatedTaskLabel>}
-    </HStack >
-  )
+         {isEditing ?
+            <Input
+               px={1}
+               py={0}
+               placeholder='New Task'
+               variant='unstyled'
+               value={label}
+               fontSize={18}
+               autoFocus
+               onChange={handleChangeTask}
+               blurOnSubmit
+               onBlur={onFinishEdit} /> :
+            <AnimatedTaskLabel
+               labelWidth={labelWidth}
+               onPress={onPressLabel}
+               isCompleted={isChecked}
+               textColor={activeTextColor}
+               completedTextColor={inactiveTextColor}>
+               {label}
+            </AnimatedTaskLabel>}
+      </HStack >
+   )
 }

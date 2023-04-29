@@ -1,6 +1,6 @@
 import React from 'react'
 import { Path } from 'react-native-svg'
-import Animated, { useAnimatedProps,  interpolate } from 'react-native-reanimated'
+import Animated, { useAnimatedProps, interpolate } from 'react-native-reanimated'
 
 const AnimatedPath = Animated.createAnimatedComponent(Path)
 
