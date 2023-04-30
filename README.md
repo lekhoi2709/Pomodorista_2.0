@@ -1,7 +1,7 @@
 # Pomodorista_2.0
 
 ## Usage
-Make sure you have installed Yarn on your computer and Expo GO app on mobile. 
+Make sure you have installed Yarn in your computer and Expo GO app on mobile. 
 
 1. Clone this repo to your local computer.
 2. Open terminal and move into work directory.
